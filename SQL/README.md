@@ -1,38 +1,36 @@
-🏥 Healthcare Readmission Analytics (SQL Project)
-📌 Project Overview
+# 🏥 Healthcare Readmission Analytics (SQL Project)
 
-Hospital readmissions within 30 days are a major driver of healthcare costs and a key indicator of care quality.
-This project analyzes 30-day hospital readmissions using a SQL-first analytics approach, with data prepared in Python and all insights, KPIs, and risk segmentation derived using SQL.
+## 📌 Project Overview
 
-The goal is to:
+Hospital readmissions within 30 days are a major driver of healthcare costs and a key indicator of care quality.  
+This project analyzes **30-day hospital readmissions** using a **SQL-first analytics approach**, with data prepared in Python and all insights, KPIs, and risk segmentation derived using SQL.
 
-Identify key drivers of readmission
+The project focuses on:
+- Identifying **key drivers of readmission**
+- Quantifying **business-relevant healthcare KPIs**
+- Segmenting patients into **risk tiers** for targeted intervention
 
-Quantify business-relevant healthcare KPIs
+---
 
-Segment patients into risk tiers for targeted intervention
+## 🎯 Business Objective
 
-🎯 Business Objective
+- Reduce avoidable 30-day hospital readmissions  
+- Identify high-risk patient groups early  
+- Support data-driven discharge planning and care management  
 
-Reduce avoidable 30-day hospital readmissions
+**Primary Question:**  
+> *Which patient characteristics and utilization patterns are most strongly associated with early readmissions?*
 
-Identify high-risk patient groups early
+---
 
-Support data-driven discharge planning and care management
+## 🧱 Tech Stack
 
-Primary Question:
+- **SQL** – Core analytics, KPIs, and risk analysis  
+- **Python** – Data preparation and feature engineering (pre-SQL)  
+- **Database** – PostgreSQL / MySQL compatible SQL  
+- **Techniques** – Aggregations, CASE logic, window functions, percentiles  
 
-Which patient characteristics and utilization patterns are most strongly associated with early readmissions?
-
-🧱 Tech Stack
-
-SQL: Core analytics, KPIs, risk analysis
-
-Python: Data preparation & feature engineering (pre-SQL)
-
-Database: PostgreSQL / MySQL compatible SQL
-
-Tools: Window functions, aggregations, percentiles
+---
 ```
 🗂️ Project Structure
 healthcare-readmission-sql/
