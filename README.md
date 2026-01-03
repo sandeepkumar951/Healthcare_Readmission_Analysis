@@ -46,13 +46,10 @@ healthcare-readmission-analysis/
 ├── README.md
 │
 ├── data/
-│   ├── raw/                # Source reference only
-│   └── processed/          # Cleaned datasets
+│   ├── raw/              
 │
 ├── notebooks/
-│   ├── 01_data_cleaning.ipynb
-│   ├── 02_eda.ipynb
-│   └── 03_feature_engineering.ipynb
+│   ├── Readmission_Risk_Assessment.ipynb
 │
 ├── sql/
 │   ├── 01_schema.sql
@@ -62,7 +59,8 @@ healthcare-readmission-analysis/
 │   └── 05_advanced_analysis.sql
 │
 ├── dashboards/
-│   ├── powerbi_screenshots/
+│   ├── powerbi
+│   ├── Excel
 │
 ├── insights/
 │   ├── key_findings.md
