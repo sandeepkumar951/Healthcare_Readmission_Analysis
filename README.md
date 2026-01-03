@@ -46,7 +46,7 @@ healthcare-readmission-analysis/
 ├── README.md
 │
 ├── data/
-│   ├── raw/              
+│   ├── raw           
 │
 ├── notebooks/
 │   ├── Readmission_Risk_Assessment.ipynb
