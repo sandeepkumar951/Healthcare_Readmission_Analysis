@@ -169,7 +169,7 @@ df['target'] = (df['readmitted'] == '<30').astype(int)
 
 - Length of stay × Readmission
 
-3. Multivariate Analysis
+3.Multivariate Analysis
 
 - Age × Diagnosis × Readmission
 
