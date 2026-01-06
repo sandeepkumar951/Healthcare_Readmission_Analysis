@@ -1,4 +1,3 @@
-
 -- Rank patients by inpatient visits
 
 WITH patient_risk AS (
