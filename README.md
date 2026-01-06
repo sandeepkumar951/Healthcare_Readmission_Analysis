@@ -79,7 +79,7 @@ Treated readmission as:
 
 - Multi-class outcome: <30, >30, NO
 
-- Binary outcome (for risk analysis):
+-- Binary outcome (for risk analysis):
 
 - 1 → Readmitted within 30 days
 
@@ -95,17 +95,17 @@ Stakeholders Identified:
 
 ---
 
-2️⃣ Excel-Based Data Cleaning & Feature Engineering
+## 2️⃣ Excel-Based Data Cleaning & Feature Engineering
 
 Initial preprocessing and feature creation were performed in Excel.
 
-Features Created:
+### Features Created:
 
-Admission Category
+-- Admission Category
 
-Emergency
+- Emergency
 
-Urgent
+- Urgent
 
 Elective
 
