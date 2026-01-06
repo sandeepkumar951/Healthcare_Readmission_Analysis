@@ -3,8 +3,8 @@
 WITH patient_risk AS (
     SELECT
         patient_nbr,
-        SUM(number_inpatient) AS total_inpatient_visits
-    FROM admissions
+        SUM(prior_inpatient) AS total_inpatient_visits
+    FROM patient_readmissions
     GROUP BY patient_nbr
 )
 SELECT *,
@@ -15,11 +15,11 @@ ORDER BY risk_rank;
 -- High-risk segmentation
 SELECT
     patient_nbr,
-    SUM(number_inpatient) AS visits,
+    SUM(prior_inpatient) AS visits,
     CASE 
-        WHEN SUM(number_inpatient) >= 5 THEN 'High Risk'
-        WHEN SUM(number_inpatient) BETWEEN 2 AND 4 THEN 'Medium Risk'
+        WHEN SUM(prior_inpatient) >= 5 THEN 'High Risk'
+        WHEN SUM(prior_inpatient) BETWEEN 2 AND 4 THEN 'Medium Risk'
         ELSE 'Low Risk'
     END AS risk_segment
-FROM admissions
+FROM patient_readmissions
 GROUP BY patient_nbr;
