@@ -163,7 +163,7 @@ Admission type × Length of stay × Readmission
 
 Prior utilization × Discharge outcome
 
----
+
 
 4️⃣ Feature Engineering in Python
 
@@ -183,25 +183,31 @@ Purpose: Improve interpretability and prepare data for SQL metrics and dashboard
 
 5️⃣ SQL-Based Business Metrics & Analysis
 
-Advanced SQL queries were used to:
+## 🔍 Analysis Workflow
 
-Calculate overall and segmented readmission rates
+### 1️⃣ Data Validation
+- Checked missing values
+- Validated target distribution
+- Identified invalid hospital stay durations
 
-Identify high-risk patient cohorts
+### 2️⃣ Exploratory Data Analysis (EDA)
+- Readmission distribution
+- Age group & gender analysis
+- Admission type & discharge category impact
+- Length of stay & medication burden
+- Prior inpatient and emergency utilization
 
-Rank diagnoses, age groups, and admission types
+### 3️⃣ Business Metrics & KPIs
+- Overall 30-day readmission rate
+- Readmission rate by admission type and discharge category
+- High-risk patient share
+- Average length of stay comparison
+- Medication burden impact
 
-Compare early vs late readmissions
+### 4️⃣ Advanced SQL Analysis
+- Patient risk ranking using window functions
+- High / Medium / Low risk segmentation based on prior utilization
 
-Techniques Used:
-
-CTEs
-
-Window functions
-
-Conditional aggregation
-
-Percentile analysis
 
 ---
 
