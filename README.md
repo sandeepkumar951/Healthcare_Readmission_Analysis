@@ -79,7 +79,7 @@ Treated readmission as:
 
 - Multi-class outcome: <30, >30, NO
 
--- Binary outcome (for risk analysis):
+Binary outcome (for risk analysis):
 
 - 1 → Readmitted within 30 days
 
@@ -101,101 +101,100 @@ Initial preprocessing and feature creation were performed in Excel.
 
 ### Features Created:
 
--- Admission Category
+1.Admission Category
 
 - Emergency
 
 - Urgent
 
-Elective
+- Elective
 
-Other
+- Other
 
-Discharge Category
+2.Discharge Category
 
-Home
+- Home
 
-Transferred to Facility
+- Transferred to Facility
 
-Left Against Medical Advice
+- Left Against Medical Advice
 
-Expired / Other
+- Expired / Other
 
-Why Excel?
+### Why Excel?
 
-Improves business interpretability
+- Improves business interpretability
 
-Enables early validation of category logic
+- Enables early validation of category logic
 
 The Excel-processed dataset was then exported for Python and SQL analysis.
 
 ---
 
-3️⃣ Python-Based Exploratory Data Analysis (EDA)
+## 3️⃣ Python-Based Exploratory Data Analysis (EDA)
 
 Python served as the core analytical layer.
 
 Tools Used
 
-pandas, numpy, matplotlib, seaborn, scipy
+- pandas, numpy, matplotlib, seaborn
 
 Target Variable Creation
 df['target'] = (df['readmitted'] == '<30').astype(int)
 
 
-1 → Readmitted within 30 days
+- 1 → Readmitted within 30 days
 
-0 → Not readmitted within 30 days
+- 0 → Not readmitted within 30 days
 
-EDA Performed
+### EDA Performed
 
-Univariate Analysis
+1.Univariate Analysis
 
-Age distribution
+- Age distribution
 
-Length of stay
+- Length of stay
 
-Medication and procedure counts
+- Medication and procedure counts
 
-Admission and discharge categories
+- Admission and discharge categories
 
-Bivariate Analysis
+2.Bivariate Analysis
 
-Age × Readmission
+- Age × Readmission
 
-Admission category × Readmission
+- Admission category × Readmission
 
-Discharge category × Readmission
+- Discharge category × Readmission
 
-Length of stay × Readmission
+- Length of stay × Readmission
 
-Multivariate Analysis
+3. Multivariate Analysis
 
-Age × Diagnosis × Readmission
+- Age × Diagnosis × Readmission
 
-Admission type × Length of stay × Readmission
+- Admission type × Length of stay × Readmission
 
-Prior utilization × Discharge outcome
+- Prior utilization × Discharge outcome
+  
 
-
-
-4️⃣ Feature Engineering in Python
+### 4️⃣ Feature Engineering in Python
 
 Additional analytical features were engineered:
 
-Age group buckets
+- Age group buckets
 
-Length-of-stay categories
+- Length-of-stay categories
 
-Prior utilization indicators
+- Prior utilization indicators
 
-Diagnosis category consolidation
+- Diagnosis category consolidation
 
 Purpose: Improve interpretability and prepare data for SQL metrics and dashboards.
 
 ---
 
-5️⃣ SQL-Based Business Metrics & Analysis
+## 5️⃣ SQL-Based Business Metrics & Analysis
 
 ## 🔍 Analysis Workflow
 
@@ -225,61 +224,61 @@ Purpose: Improve interpretability and prepare data for SQL metrics and dashboard
 
 ---
 
-6️⃣ Dashboards (Power BI / Excel)
+## 6️⃣ Dashboards (Power BI / Excel)
 
 Interactive dashboards were built to visualize:
 
-Overall readmission rate
+- Overall readmission rate
 
-Readmission by age, diagnosis, and admission type
+- Readmission by age, diagnosis, and admission type
 
-Length of stay impact
+- Length of stay impact
 
-High-risk patient segments
+- High-risk patient segments
 
 Dashboards are designed for non-technical stakeholders.
 
 --- 
 
-📈 Key Insights
+## 📈 Key Insights
 
-Readmission risk increases significantly for patients aged 50–80
+- Readmission risk increases significantly for patients aged 50–80
 
-Emergency admissions show the highest 30-day readmission rates
+- Emergency admissions show the highest 30-day readmission rates
 
-Longer hospital stays correlate with higher clinical complexity
+- Longer hospital stays correlate with higher clinical complexity
 
-Prior inpatient visits strongly predict early readmission
+- Prior inpatient visits strongly predict early readmission
 --- 
 
-💡 Business Recommendations
+## 💡 Business Recommendations
 
-Implement risk-based discharge planning for elderly patients
+- Implement risk-based discharge planning for elderly patients
 
-Prioritize follow-ups for patients with prior inpatient visits
+- Prioritize follow-ups for patients with prior inpatient visits
 
-Improve medication reconciliation for high-complexity cases
+- Improve medication reconciliation for high-complexity cases
 
-Use readmission risk indicators to guide care coordination
+- Use readmission risk indicators to guide care coordination
 ---
 
-⚠️ Limitations & Assumptions
+## ⚠️ Limitations & Assumptions
 
-Observational data (no causal inference)
+- Observational data (no causal inference)
 
-Simplified diagnosis grouping
+- Simplified diagnosis grouping
 
-Unobserved clinical severity factors
+- Unobserved clinical severity factors
 
 Results depend on historical patterns
 ---
 
-🚀 Future Enhancements
+## 🚀 Future Enhancements
 
-Predictive modeling (Logistic Regression, Tree-based models)
+- Predictive modeling (Logistic Regression, Tree-based models)
 
-Model explainability (SHAP)
+- Model explainability (SHAP)
 
-Cost impact analysis
+- Cost impact analysis
 
-Integration with real-time EHR data
+- Integration with real-time EHR data
